@@ -7,35 +7,28 @@ import com.siakad.model.Course;
  * Interface ini akan di-stub atau di-mock dalam unit testing
  */
 
-public class CourseRepository {
+// DIUBAH: Menjadi interface
+public interface CourseRepository {
 
     /**
      * Mencari mata kuliah berdasarkan course code
-     *
      * @param courseCode Kode mata kuliah
      * @return Course object atau null jika tidak ditemukan
      */
-    public Course findByCourseCode(String courseCode) {
-        return null;
-    }
+    // Method di interface otomatis public, tidak perlu 'abstract'
+    Course findByCourseCode(String courseCode);
 
     /**
      * Update data mata kuliah
-     *
      * @param course Course object yang akan diupdate
      */
-    public void update(Course course) {
-
-    }
+    void update(Course course);
 
     /**
      * Mengecek apakah prasyarat mata kuliah sudah terpenuhi
-     *
-     * @param studentId  ID mahasiswa
+     * @param studentId ID mahasiswa
      * @param courseCode Kode mata kuliah
      * @return true jika prasyarat terpenuhi, false jika tidak
      */
-    public boolean isPrerequisiteMet(String studentId, String courseCode) {
-        return false;
-    }
+    boolean isPrerequisiteMet(String studentId, String courseCode);
 }
